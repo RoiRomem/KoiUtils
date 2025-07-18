@@ -15,8 +15,8 @@ A comprehensive motor controller wrapper for FRC robots that combines SparkMax m
 ### Basic Motor (No PID)
 ```java
 // Motor without PID control
-SmartMotor motor = new SmartMotor(1, MotorType.kBrushless, 0);
-motor.setMotorName("Arm Motor");
+SmartMotor motor = new SmartMotor(1, MotorType.kBrushless, 0)
+    .setMotorName("Arm Motor");
 ```
 
 ### Motor with PID Control
@@ -26,9 +26,9 @@ SparkMaxConfig config = new SparkMaxConfig();
 config.closedLoop.pid(0.1, 0.0, 0.01).velocityFF(0.0);
 
 // Create motor with PID
-SmartMotor pidMotor = new SmartMotor(2, MotorType.kBrushless, 1, config);
-pidMotor.setMotorName("Shooter Angle");
-pidMotor.setMotorState(SmartMotor.MOTOR_STATE.TUNING);
+SmartMotor pidMotor = new SmartMotor(2, MotorType.kBrushless, 1, config)
+    .setMotorName("Shooter Angle")
+    .setMotorState(SmartMotor.MOTOR_STATE.TUNING);
 ```
 
 ### With Absolute Encoder Offset
@@ -161,8 +161,3 @@ Changes to PID values are automatically applied to the motor controller.
 
 - REV Robotics SparkMax Library (2025)
 - WPILib (2025)
-- Custom `KoiLog` utility for error logging
-
-## License
-
-This utility is part of the KoiUtils package for FRC Team use.

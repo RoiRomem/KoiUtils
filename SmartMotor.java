@@ -81,11 +81,11 @@ public class SmartMotor {
         kFF = 0.0;
     }
 
-    public void setMotorName(String m_name) {
+    public SmartMotor setMotorName(String m_name) {
         this.motorName = m_name;
     }
 
-    public void setMotorState(MOTOR_STATE state) {
+    public SmartMotor setMotorState(MOTOR_STATE state) {
         this.motorState = state;
     }
 
